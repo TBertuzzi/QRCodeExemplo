@@ -2,10 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:QRCodeExemplo"
-             x:Class="QRCodeExemplo.MainPage">
+             x:Class="QRCodeExemplo.MainPage" Padding="0,20,0,0">
 
-	<Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
-
+    <StackLayout >
+        <Button x:Name="btnQrcode" Text="Ler QRCODE" />
+        <Label x:Name="lblResultado" Text="" HorizontalTextAlignment="Center" />
+    </StackLayout>
 </ContentPage>

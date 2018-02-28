@@ -12,6 +12,18 @@ namespace QRCodeExemplo
 		public MainPage()
 		{
 			InitializeComponent();
-		}
+
+            btnQrcode.Clicked += async (sender, e) => {
+
+                var ZXing = new ZXing.Mobile.MobileBarcodeScanner();
+
+                var resultado = await ZXing.Scan();
+
+                if (resultado != null)
+                {
+                    lblResultado.Text = "QRCODE: " + resultado.Text;
+                }
+            };
+        }
 	}
 }
