@@ -119,15 +119,17 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
     <PackageReference Include="ZXing.Net.Mobile.Forms">
-      <Version>2.3.2</Version>
+      <Version>2.4.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms">
+      <Version>2.5.1.444934</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\QRCodeExemplo\QRCodeExemplo.csproj">
-      <Project>{EA755E79-E423-4FB1-B84C-ECAFF7F83030}</Project>
+      <Project>{B2CB7A05-E732-4739-95FD-881AF6E9F497}</Project>
       <Name>QRCodeExemplo</Name>
     </ProjectReference>
   </ItemGroup>

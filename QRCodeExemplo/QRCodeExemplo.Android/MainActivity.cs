@@ -28,10 +28,8 @@ namespace QRCodeExemplo.Droid
         }
 
         //ZXing Inicialização
-        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults)
-        {
-            global::ZXing.Net.Mobile.Android.PermissionsHandler.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-        }
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults) 
+        { ZXing.Net.Mobile.Android.PermissionsHandler.OnRequestPermissionsResult(requestCode, permissions, grantResults); }
     }
 }
 

@@ -4,26 +4,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using ZXing.Net.Mobile.Forms;
 
 namespace QRCodeExemplo
 {
 	public partial class MainPage : ContentPage
 	{
+
 		public MainPage()
 		{
 			InitializeComponent();
 
             btnQrcode.Clicked += async (sender, e) => {
 
-                var ZXing = new ZXing.Mobile.MobileBarcodeScanner();
+                ZXingView zXingView = new ZXingView();
+                zXingView.BarcodeReaded += ZXingView_BarcodeReaded;
 
-                var resultado = await ZXing.Scan();
+                await Navigation.PushModalAsync(zXingView);
 
-                if (resultado != null)
-                {
-                    lblResultado.Text = "QRCODE: " + resultado.Text;
-                }
             };
         }
+
+        void ZXingView_BarcodeReaded(object sender, string e)
+        {
+            lblResultado.Text = "QRCODE: " + e;
+        }
+
 	}
 }
